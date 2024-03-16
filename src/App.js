@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavBar from "./Component/NavBar";
+import Footer from "./Component/Footer";
+import Body from "./Component/Body";
+import BodyHeader from "./Component/BodyHeader";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col">
+      
+      <div className=" flex flex-col  bg-gradient-to-r from-blue-900 to-black">
+        <NavBar />
+        <hr className=" opacity-10  border-[1px] mx-10 md:mx-20"></hr>
+        <BodyHeader />
+      </div>
+ <Body/>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
